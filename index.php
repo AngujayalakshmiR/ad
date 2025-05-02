@@ -39,7 +39,22 @@
       padding: 15px 30px;
       width: 100%; /* Make button width responsive */
     }
+    .btn-custom:hover {
+      background-color: #5867dd;
+      color: white;
+      font-size: 1.5rem; /* Make the button text larger */
+      padding: 15px 30px; /* Increase padding to make the button bigger */
+      width: 100%; /* Make button width responsive */
+    }
 
+    .btn-custom-outline:hover {
+      background-color: transparent;
+      border-color: #5867dd;
+      color: #5867dd;
+      font-size: 1.5rem;
+      padding: 15px 30px;
+      width: 100%; /* Make button width responsive */
+    }
     .button-container {
       display: flex;
       flex-direction: column;

@@ -233,7 +233,7 @@
                 <!-- Repeat for each card -->
                 <div class="col-md-4">
                     <div class="card">
-                    <img src="assets/img/profile2.jpg" style="height:200px;" class="card-img-top" alt="...">
+                    <img src="assets/img/beach.jpg" style="height:200px;" class="card-img-top" alt="...">
                     <button class="btn-view-more" onclick="window.location.href='registration-details.php'">Registrations</button>
                     <div class="card-body">
                         <h5 class="card-title">Beach Cleanup Drive</h5>
@@ -250,10 +250,10 @@
                 </div>
                 <div class="col-md-4">
                     <div class="card">
-                    <img src="assets/img/profile2.jpg" style="height:200px;" class="card-img-top" alt="...">
+                    <img src="assets/img/park.jpg" style="height:200px;" class="card-img-top" alt="...">
                     <button class="btn-view-more" onclick="window.location.href='registration-details.php'">Registrations</button>
                     <div class="card-body">
-                        <h5 class="card-title">Beach Cleanup Drive</h5>
+                        <h5 class="card-title">Park Cleanup Drive</h5>
 
                         <div class="d-flex justify-content-between mb-2">
                             <p class="card-text mb-0"><strong>Venue:</strong> Park</p>
@@ -267,13 +267,13 @@
                 </div>
                 <div class="col-md-4">
                     <div class="card">
-                    <img src="assets/img/profile2.jpg" style="height:200px;" class="card-img-top" alt="...">
+                    <img src="assets/img/society.jpg" style="height:200px;" class="card-img-top" alt="...">
                     <button class="btn-view-more" onclick="window.location.href='registration-details.php'">Registrations</button>
                     <div class="card-body">
-                        <h5 class="card-title">Beach Cleanup Drive</h5>
+                        <h5 class="card-title">Society Cleanup Drive</h5>
 
                         <div class="d-flex justify-content-between mb-2">
-                            <p class="card-text mb-0"><strong>Venue:</strong> aaa</p>
+                            <p class="card-text mb-0"><strong>Venue:</strong> Society</p>
                             <p class="card-text mb-0"><strong>Date:</strong> June 12, 2025</p>
                         </div>
 
