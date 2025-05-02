@@ -12,6 +12,11 @@
       href="assets/img/kaiadmin/favicon.ico"
       type="image/x-icon"
     />
+    <link
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+  rel="stylesheet"
+/>
+
 
     <!-- Fonts and icons -->
     <script src="assets/js/plugin/webfont/webfont.min.js"></script>
@@ -74,14 +79,14 @@
           <div class="sidebar-content">
             <ul class="nav nav-secondary">
               
-            <li class="nav-item active">
+            <li class="nav-item ">
                 <a href="organiser-dashboard.php">
                   <i class="fas fa-desktop"></i>
                   <p>Add Events</p>
                   <!-- <span class="badge badge-success">4</span> -->
                 </a>
               </li>
-              <li class="nav-item">
+              <li class="nav-item active">
                 <a href="registrations.php">
                   <i class="fas fa-file"></i>
                   <p>Registrations</p>
@@ -988,9 +993,6 @@
               </div>
             </div>
           </div>
-        </div>
-        <div class="custom-toggle">
-          <i class="icon-settings"></i>
         </div>
       </div>
       <!-- End Custom template -->
