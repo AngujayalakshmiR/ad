@@ -17,6 +17,76 @@
   rel="stylesheet"
 />
 
+<style>
+     .card {
+  position: relative;
+  border: none;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  border-radius: 12px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  animation: fadeInUp 0.6s ease forwards;
+  opacity: 0;
+}
+
+.card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.card img {
+  transition: transform 0.4s ease;
+  object-fit: cover;
+  width: 100%;
+}
+
+.card:hover img {
+  transform: scale(1.05);
+}
+
+.btn-view-more {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background-color: #5867dd;
+  color: white;
+  border: none;
+  padding: 6px 12px;
+  font-size: 13px;
+  border-radius: 6px;
+  z-index: 10;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.btn-view-more:hover {
+  background-color: #4756c5;
+  transform: scale(1.05);
+}
+
+.card-title {
+  color: #5867dd;
+  font-weight: 600;
+  font-size: 1.25rem;
+}
+
+.card-text {
+  font-size: 14px;
+  color: #555;
+}
+
+/* Animation */
+@keyframes fadeInUp {
+  from {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+}
+
+    </style>
     <!-- Fonts and icons -->
     <script src="assets/js/plugin/webfont/webfont.min.js"></script>
     <script>
@@ -81,12 +151,12 @@
               
             <li class="nav-item active">
                 <a href="organiser-dashboard.php">
-                  <i class="fa-solid fa-calendar-plus"></i>
+                  <i class="fas fa-desktop"></i>
                   <p>Add Events</p>
                   <!-- <span class="badge badge-success">4</span> -->
                 </a>
               </li>
-              <li class="nav-item">
+              <li class="nav-item ">
                 <a href="registrations.php">
                   <i class="fas fa-file"></i>
                   <p>Registrations</p>
@@ -145,6 +215,9 @@
     Logout
   </a>
 </li>
+
+
+
               </ul>
             </div>
           </nav>
@@ -158,225 +231,121 @@
             >
               <div>
                 <h3 class="fw-bold mb-3">Dashboard</h3>
+                <!-- <h6 class="op-7 mb-2">Free Bootstrap 5 Admin Dashboard</h6> -->
               </div>
               <div class="ms-md-auto py-2 py-md-0">
-                <a href="#" class="btn  btn-round me-2" style="background: #5867dd;color:white;">Manage Events</a>
-                <a href="#" class="btn  btn-round" style="background: #5867dd;color:white;">Make Valuable Contributions</a>
+                <a href="#" class="btn  btn-round me-2" style="color: #fff;background:#5867dd;">Manage Events</a>
+                <a href="#" class="btn  btn-round" style="color: #fff;background:#5867dd;">Make Valuable Contributions</a>
               </div>
+
+              
             </div>
-            
             <div class="card-body" style="border-radius: 25px; background-color: white;padding:20px;border:2px solid #5867dd">
-  <form action="submit_event.php" method="POST" enctype="multipart/form-data">
+  <form id="eventForm" enctype="multipart/form-data">  
     <div class="row">
-        <div class="col-6">
-      <div class="mb-3 col-12">
-        <label for="eventTitle" class="form-label">Event Title</label>
-        <input type="text" class="form-control" id="eventTitle" name="eventTitle" required>
+      <div class="col-6">
+        <div class="mb-3 col-12">
+          <label for="eventTitle" class="form-label">Event Title</label>
+          <input type="text" class="form-control" id="eventTitle" name="eventTitle" required>
+        </div>
+
+        <div class="mb-3 col-12">
+          <label for="eventPoster" class="form-label">Event Poster</label>
+          <input type="file" class="form-control" id="eventPoster" name="eventPoster" accept="image/*" required>
+        </div>
       </div>
 
-      <div class="mb-3 col-12">
-        <label for="eventPoster" class="form-label">Event Poster</label>
-        <input type="file" class="form-control" id="eventPoster" name="eventPoster" accept="image/*" required>
-      </div>
-        </div>
       <div class="mb-3 col-6">
         <label for="eventDescription" class="form-label">Event Description</label>
         <textarea class="form-control" id="eventDescription" name="eventDescription" rows="5" required></textarea>
       </div>
     </div>
+
     <div class="d-flex justify-content-end">
-      <button type="submit" class="btn " style="background: #5867dd; "><span style="color: #fff;">Submit</span></button>
+      <button type="submit" class="btn" style="background: #5867dd;"><span style="color: #fff;">Submit</span></button>
     </div>
   </form>
 </div>
 
 
-            </div>
-            <!-- <div class="row">
-             
-              <div class="col-md-12">
-                <div class="card card-round">
-                  <div class="card-header">
-                    <div class="card-head-row card-tools-still-right">
-                      <div class="card-title">Transaction History</div>
-                      <div class="card-tools">
-                        <div class="dropdown">
-                          <button
-                            class="btn btn-icon btn-clean me-0"
-                            type="button"
-                            id="dropdownMenuButton"
-                            data-bs-toggle="dropdown"
-                            aria-haspopup="true"
-                            aria-expanded="false"
-                          >
-                            <i class="fas fa-ellipsis-h"></i>
-                          </button>
-                          <div
-                            class="dropdown-menu"
-                            aria-labelledby="dropdownMenuButton"
-                          >
-                            <a class="dropdown-item" href="#">Action</a>
-                            <a class="dropdown-item" href="#">Another action</a>
-                            <a class="dropdown-item" href="#"
-                              >Something else here</a
-                            >
-                          </div>
+<div class="container mt-4">
+            <div class="page-inner">
+                <div class="row g-4">
+                
+                <!-- Repeat for each card -->
+                <div class="col-md-4">
+                    <div class="card">
+                    <img src="assets/img/beach.jpg" style="height:200px;" class="card-img-top" alt="...">
+                    <button class="btn-view-more">View More</button>
+                    <div class="card-body">
+                        <h5 class="card-title">Beach Cleanup Drive</h5>
+
+                        <div class="d-flex justify-content-between mb-2">
+                            <p class="card-text mb-0"><strong>Venue:</strong> Beach</p>
+                            <p class="card-text mb-0"><strong>Date:</strong> June 12, 2025</p>
                         </div>
-                      </div>
+
+                        <p class="card-text"><strong>Organizer:</strong> EcoVolunteers</p>
                     </div>
-                  </div>
-                  <div class="card-body p-0">
-                    <div class="table-responsive">
-                      <table class="table align-items-center mb-0">
-                        <thead class="thead-light">
-                          <tr>
-                            <th scope="col">Payment Number</th>
-                            <th scope="col" class="text-end">Date & Time</th>
-                            <th scope="col" class="text-end">Amount</th>
-                            <th scope="col" class="text-end">Status</th>
-                          </tr>
-                        </thead>
-                        <tbody>
-                          <tr>
-                            <th scope="row">
-                              <button
-                                class="btn btn-icon btn-round btn-success btn-sm me-2"
-                              >
-                                <i class="fa fa-check"></i>
-                              </button>
-                              Payment from #10231
-                            </th>
-                            <td class="text-end">Mar 19, 2020, 2.45pm</td>
-                            <td class="text-end">$250.00</td>
-                            <td class="text-end">
-                              <span class="badge badge-success">Completed</span>
-                            </td>
-                          </tr>
-                          <tr>
-                            <th scope="row">
-                              <button
-                                class="btn btn-icon btn-round btn-success btn-sm me-2"
-                              >
-                                <i class="fa fa-check"></i>
-                              </button>
-                              Payment from #10231
-                            </th>
-                            <td class="text-end">Mar 19, 2020, 2.45pm</td>
-                            <td class="text-end">$250.00</td>
-                            <td class="text-end">
-                              <span class="badge badge-success">Completed</span>
-                            </td>
-                          </tr>
-                          <tr>
-                            <th scope="row">
-                              <button
-                                class="btn btn-icon btn-round btn-success btn-sm me-2"
-                              >
-                                <i class="fa fa-check"></i>
-                              </button>
-                              Payment from #10231
-                            </th>
-                            <td class="text-end">Mar 19, 2020, 2.45pm</td>
-                            <td class="text-end">$250.00</td>
-                            <td class="text-end">
-                              <span class="badge badge-success">Completed</span>
-                            </td>
-                          </tr>
-                          <tr>
-                            <th scope="row">
-                              <button
-                                class="btn btn-icon btn-round btn-success btn-sm me-2"
-                              >
-                                <i class="fa fa-check"></i>
-                              </button>
-                              Payment from #10231
-                            </th>
-                            <td class="text-end">Mar 19, 2020, 2.45pm</td>
-                            <td class="text-end">$250.00</td>
-                            <td class="text-end">
-                              <span class="badge badge-success">Completed</span>
-                            </td>
-                          </tr>
-                          <tr>
-                            <th scope="row">
-                              <button
-                                class="btn btn-icon btn-round btn-success btn-sm me-2"
-                              >
-                                <i class="fa fa-check"></i>
-                              </button>
-                              Payment from #10231
-                            </th>
-                            <td class="text-end">Mar 19, 2020, 2.45pm</td>
-                            <td class="text-end">$250.00</td>
-                            <td class="text-end">
-                              <span class="badge badge-success">Completed</span>
-                            </td>
-                          </tr>
-                          <tr>
-                            <th scope="row">
-                              <button
-                                class="btn btn-icon btn-round btn-success btn-sm me-2"
-                              >
-                                <i class="fa fa-check"></i>
-                              </button>
-                              Payment from #10231
-                            </th>
-                            <td class="text-end">Mar 19, 2020, 2.45pm</td>
-                            <td class="text-end">$250.00</td>
-                            <td class="text-end">
-                              <span class="badge badge-success">Completed</span>
-                            </td>
-                          </tr>
-                          <tr>
-                            <th scope="row">
-                              <button
-                                class="btn btn-icon btn-round btn-success btn-sm me-2"
-                              >
-                                <i class="fa fa-check"></i>
-                              </button>
-                              Payment from #10231
-                            </th>
-                            <td class="text-end">Mar 19, 2020, 2.45pm</td>
-                            <td class="text-end">$250.00</td>
-                            <td class="text-end">
-                              <span class="badge badge-success">Completed</span>
-                            </td>
-                          </tr>
-                        </tbody>
-                      </table>
+
                     </div>
-                  </div>
                 </div>
-              </div>
-            </div> -->
+                <div class="col-md-4">
+                    <div class="card">
+                    <img src="assets/img/park.jpg" style="height:200px;" class="card-img-top" alt="...">
+                    <button class="btn-view-more">View More</button>
+                    <div class="card-body">
+                        <h5 class="card-title">Park Cleanup Drive</h5>
+
+                        <div class="d-flex justify-content-between mb-2">
+                            <p class="card-text mb-0"><strong>Venue:</strong> Park</p>
+                            <p class="card-text mb-0"><strong>Date:</strong> June 12, 2025</p>
+                        </div>
+
+                        <p class="card-text"><strong>Organizer:</strong> EcoVolunteers</p>
+                    </div>
+
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card">
+                    <img src="assets/img/society.jpg" style="height:200px;" class="card-img-top" alt="...">
+                    <button class="btn-view-more">View More</button>
+                    <div class="card-body">
+                        <h5 class="card-title">Society Cleanup Drive</h5>
+
+                        <div class="d-flex justify-content-between mb-2">
+                            <p class="card-text mb-0"><strong>Venue:</strong> Society</p>
+                            <p class="card-text mb-0"><strong>Date:</strong> June 12, 2025</p>
+                        </div>
+
+                        <p class="card-text"><strong>Organizer:</strong> EcoVolunteers</p>
+                    </div>
+                    <!-- <div class="mt-3">
+                        <button class="btn btn-success w-100">Approved</button>
+                    </div> -->
+                    </div>
+                </div>
+
+                <!-- Repeat other cards... -->
+
+                </div>
+            </div>
+        </div>
+
+
+
           </div>
         </div>
 
         <footer class="footer">
-          <div class="container-fluid d-flex justify-content-between">
-            <nav class="pull-left">
-              <ul class="nav">
-                <li class="nav-item">
-                  <a class="nav-link" href="http://www.themekita.com">
-                    ThemeKita
-                  </a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="#"> Help </a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="#"> Licenses </a>
-                </li>
-              </ul>
-            </nav>
+          <div class="container-fluid d-flex justify-content-center">
+ 
             <div class="copyright">
-              2024, made with <i class="fa fa-heart heart text-danger"></i> by
-              <a href="http://www.themekita.com">ThemeKita</a>
+              @ 2025, Developed by
+              <a href="#">Septignite</a>
             </div>
-            <div>
-              Distributed by
-              <a target="_blank" href="https://themewagon.com/">ThemeWagon</a>.
-            </div>
+
           </div>
         </footer>
       </div>
@@ -570,7 +539,6 @@
             </div>
           </div>
         </div>
-       
       </div>
       <!-- End Custom template -->
     </div>
@@ -640,3 +608,7 @@
     </script>
   </body>
 </html>
+
+
+
+
