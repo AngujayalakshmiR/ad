@@ -145,14 +145,14 @@
           <div class="sidebar-content">
             <ul class="nav nav-secondary">
               
-            <li class="nav-item active">
+            <li class="nav-item ">
                 <a href="volunteer-dashboard.php">
                   <i class="fas fa-home"></i>
                   <p>Dashboard</p>
                   <!-- <span class="badge badge-success">4</span> -->
                 </a>
               </li>
-              <li class="nav-item">
+              <li class="nav-item active">
                 <a href="Volunteer-application.php">
                   <i class="fas fa-user-check"></i>
                   <p>Applied</p>
@@ -222,7 +222,7 @@
         </div><br><br>
         <div class="container mt-4">
             <div class="page-inner">
-                <h1>List of Volunteering events</h1><br>
+                <h1>List of Applied Volunteering events</h1><br>
                 <div class="row g-4">
                 
                 <!-- Repeat for each card -->
@@ -240,7 +240,9 @@
 
                         <p class="card-text"><strong>Organizer:</strong> EcoVolunteers</p>
                     </div>
-
+                    <div class="mt-3">
+                        <button class="btn btn-danger w-100">Not Approved</button>
+                    </div>
                     </div>
                 </div>
                 <div class="col-md-4">
@@ -257,7 +259,9 @@
 
                         <p class="card-text"><strong>Organizer:</strong> EcoVolunteers</p>
                     </div>
-
+                    <div class="mt-3">
+                        <button class="btn btn-warning w-100">Applied</button>
+                    </div>
                     </div>
                 </div>
                 <div class="col-md-4">
@@ -274,9 +278,9 @@
 
                         <p class="card-text"><strong>Organizer:</strong> EcoVolunteers</p>
                     </div>
-                    <!-- <div class="mt-3">
+                    <div class="mt-3">
                         <button class="btn btn-success w-100">Approved</button>
-                    </div> -->
+                    </div>
                     </div>
                 </div>
 
