@@ -9,7 +9,7 @@
     />
     <link
       rel="icon"
-      href="assets/img/kaiadmin/favicon.ico"
+      href="assets/img/logo.png"
       type="image/x-icon"
     />
     <link
@@ -55,10 +55,11 @@
           <div class="logo-header" data-background-color="dark">
             <a href="index.html" class="logo">
               <img
-                src="assets/img/kaiadmin/logo_light.svg"
+                src="assets/img/logo.png"
                 alt="navbar brand"
                 class="navbar-brand"
-                height="20"
+                height="120"
+                width="150"
               />
             </a>
             <div class="nav-toggle">
