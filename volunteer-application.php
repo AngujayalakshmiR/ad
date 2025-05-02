@@ -12,7 +12,10 @@
       href="assets/img/logo.png"
       type="image/x-icon"
     />
-
+    <link
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    rel="stylesheet"
+    />
     <!-- Fonts and icons -->
     <script src="assets/js/plugin/webfont/webfont.min.js"></script>
     <script>
@@ -83,6 +86,7 @@
 
 .btn-view-more:hover {
   background-color: #4756c5;
+  color:white;
   transform: scale(1.05);
 }
 
@@ -153,7 +157,7 @@
                 </a>
               </li>
               <li class="nav-item active">
-                <a href="Volunteer-application.php">
+                <a href="volunteer-application.php">
                   <i class="fas fa-user-check"></i>
                   <p>Applied</p>
                   <!-- <span class="badge badge-secondary">1</span> -->
@@ -229,7 +233,7 @@
                 <div class="col-md-4">
                     <div class="card">
                     <img src="assets/img/beach.jpg" style="height:200px;" class="card-img-top" alt="...">
-                    <button class="btn-view-more">View More</button>
+                    <a href="event-details.php" class="btn-view-more">View More</a>
                     <div class="card-body">
                         <h5 class="card-title">Beach Cleanup Drive</h5>
 
@@ -248,7 +252,7 @@
                 <div class="col-md-4">
                     <div class="card">
                     <img src="assets/img/park.jpg" style="height:200px;" class="card-img-top" alt="...">
-                    <button class="btn-view-more">View More</button>
+                    <a href="event-details.php" class="btn-view-more">View More</a>
                     <div class="card-body">
                         <h5 class="card-title">Park Cleanup Drive</h5>
 
@@ -267,7 +271,7 @@
                 <div class="col-md-4">
                     <div class="card">
                     <img src="assets/img/society.jpg" style="height:200px;" class="card-img-top" alt="...">
-                    <button class="btn-view-more">View More</button>
+                    <a href="event-details.php" class="btn-view-more">View More</a>
                     <div class="card-body">
                         <h5 class="card-title">Society Cleanup Drive</h5>
 

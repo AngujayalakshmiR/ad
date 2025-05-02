@@ -86,7 +86,6 @@
 
 .btn-view-more:hover {
   background-color: #4756c5;
-  color:white;
   transform: scale(1.05);
 }
 
@@ -110,6 +109,21 @@
   to {
     transform: translateY(0px);
     opacity: 1;
+  }
+}
+
+
+.event-img {
+  width: 700px;
+  height: 400px;
+  object-fit: cover;
+}
+
+@media (max-width: 576px) {
+  .event-img {
+    width: 100% !important;
+    height: auto;
+    aspect-ratio: 1 / 1;
   }
 }
 
@@ -223,72 +237,68 @@
             </div>
           </nav>
           <!-- End Navbar -->
-        </div><br><br>
-        <div class="container mt-4">
+        </div><br>
+        <div class="container mt-5 mb-5">
             <div class="page-inner">
-                <h1>List of Volunteering events</h1><br>
-                <div class="row g-4">
-                
-                <!-- Repeat for each card -->
-                <div class="col-md-4">
-                    <div class="card">
-                    <img src="assets/img/beach.jpg" style="height:200px;" class="card-img-top" alt="...">
-                    <a href="event-details.php" class="btn-view-more">View More</a>
-                    <div class="card-body">
-                        <h5 class="card-title">Beach Cleanup Drive</h5>
+                <h1>Event Details</h1><br>
+  <div class="row g-4">
 
-                        <div class="d-flex justify-content-between mb-2">
-                            <p class="card-text mb-0"><strong>Venue:</strong> Beach</p>
-                            <p class="card-text mb-0"><strong>Date:</strong> June 12, 2025</p>
-                        </div>
+    <!-- Main Content: Event Details -->
+    <div class="col-md-8">
+        <img src="assets/img/beach.jpg" class="img-fluid rounded mb-4 event-img" alt="Event Image">
 
-                        <p class="card-text"><strong>Organizer:</strong> EcoVolunteers</p>
-                    </div>
+      <h2 class="text-primary">Beach Cleanup Drive</h2>
+      <p><strong>Description:</strong> Join us to clean the beach and help the environment. All materials provided. Volunteers will receive participation certificates.</p>
 
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="card">
-                    <img src="assets/img/park.jpg" style="height:200px;" class="card-img-top" alt="...">
-                    <a href="event-details.php" class="btn-view-more">View More</a>
-                    <div class="card-body">
-                        <h5 class="card-title">Park Cleanup Drive</h5>
+      <p><strong>Venue:</strong> Santa Monica Beach</p>
+      <p><strong>Date:</strong> June 12, 2025</p>
+      <p><strong>Time:</strong> 9:00 AM – 1:00 PM</p>
+      <p><strong>Organizer:</strong> EcoVolunteers</p>
+    </div>
 
-                        <div class="d-flex justify-content-between mb-2">
-                            <p class="card-text mb-0"><strong>Venue:</strong> Park</p>
-                            <p class="card-text mb-0"><strong>Date:</strong> June 12, 2025</p>
-                        </div>
+    <!-- Sidebar: Volunteer Form -->
+    <div class="col-md-4">
+      <div class="card p-3 shadow-sm">
+        <h5 class="mb-3 text-primary">Volunteer Registration</h5>
+        <form>
+          <div class="mb-3">
+            <label for="volunteerName" class="form-label">Name</label>
+            <input type="text" class="form-control" id="volunteerName" required>
+          </div>
 
-                        <p class="card-text"><strong>Organizer:</strong> EcoVolunteers</p>
-                    </div>
+          <div class="mb-3">
+            <label for="volunteerPlace" class="form-label">Place</label>
+            <input type="text" class="form-control" id="volunteerPlace" required>
+          </div>
 
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="card">
-                    <img src="assets/img/society.jpg" style="height:200px;" class="card-img-top" alt="...">
-                    <a href="event-details.php" class="btn-view-more">View More</a>
-                    <div class="card-body">
-                        <h5 class="card-title">Society Cleanup Drive</h5>
+          <div class="mb-3">
+            <label for="skills" class="form-label">Skills</label>
+            <input type="text" class="form-control" id="skills">
+          </div>
 
-                        <div class="d-flex justify-content-between mb-2">
-                            <p class="card-text mb-0"><strong>Venue:</strong> Society</p>
-                            <p class="card-text mb-0"><strong>Date:</strong> June 12, 2025</p>
-                        </div>
+          <div class="mb-3">
+            <label for="availableDate" class="form-label">Available Date</label>
+            <input type="date" class="form-control" id="availableDate" required>
+          </div>
 
-                        <p class="card-text"><strong>Organizer:</strong> EcoVolunteers</p>
-                    </div>
-                    <!-- <div class="mt-3">
-                        <button class="btn btn-success w-100">Approved</button>
-                    </div> -->
-                    </div>
-                </div>
+          <div class="mb-3">
+            <label for="availableTime" class="form-label">Available Time</label>
+            <input type="time" class="form-control" id="availableTime" required>
+          </div>
 
-                <!-- Repeat other cards... -->
+          <div class="mb-3">
+            <label for="concern" class="form-label">Give Your Concern</label>
+            <textarea class="form-control" id="concern" rows="3"></textarea>
+          </div>
 
-                </div>
-            </div>
-        </div>
+          <button type="submit" class="btn btn-primary w-100">Submit</button>
+        </form>
+      </div>
+    </div>
+
+  </div>
+  </div>
+</div>
 
 
 
